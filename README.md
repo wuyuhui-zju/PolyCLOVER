@@ -2,7 +2,7 @@
 
 This is the official implementation of **PolyCLOVER**, a framework for polymer combinatorial optimization leveraging machine learning techniques.
 
-## System requirements
+## :computer:System requirements
 This package has been tested on the following system:
 - Linux: Ubuntu 22.04
 - CUDA 12.4
