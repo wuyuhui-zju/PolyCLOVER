@@ -7,7 +7,7 @@ This package has been tested on the following system:
 - Linux: Ubuntu 22.04
 - CUDA 12.4
 
-## Environment configuration
+## :gear:Environment configuration
 Clone this repository:
 ```
 git clone https://github.com/wuyuhui-zju/PolyCLOVER.git
@@ -22,7 +22,7 @@ Activate the created enviroment:
 conda activate polyclover
 ```
 
-## Project structure
+## :file_folder:Project structure
 The major folders and their functions in PolyCLOVER are organized as follows:
 ```
 PolyCLOVER/
@@ -35,7 +35,7 @@ PolyCLOVER/
 ├── README.md       # Project introduction and usage guide
 ```
 
-## Quick start
+## :rocket:Quick start
 You can download the pre-trained model checkpoints and preprocessed datasets for a quick start.
 Please place the downloaded `datasets/` and `models/` directories directly under the project root.
 
@@ -106,7 +106,7 @@ The generated recommendation samples are saved in the `results` directory.
 After a round of active learning, top candidates can be experimentally synthesized and labeled.  Merge the new data with the original data and place it in `datasets/round1/round1_raw.csv`
 Then repeat the steps of **Ensemble predictor training**, **Multi-objective optimization**, and **Web-lab synthesis and labeling**.
 
-## 6. Model evaluation
+## :books:6. Model evaluation
 Please download the preprocessed file and place it in the `datasets/eval_antibacterial/` and `datasets/eval_hemolytic/` directory.
 Evaluate the test performance:
 ```
