@@ -56,7 +56,7 @@ We provide a shell script to pre-train the model:
 ```
 bash pretrain.sh
 ```
-Inside the script, you can specify `--train_mode` as either `scratch` (train from scratch) or `pretrained` (load the graph encoder trained using general polymer structures); if `pretrained` is selected, you must also specify `--model_path` (--model_path ../models/pretrained/general/base.pth).
+- Inside the script, you can specify `--train_mode` as either `scratch` (train from scratch) or `pretrained` (load the graph encoder trained using general polymer structures); if `pretrained` is selected, you must also specify `--model_path` (--model_path ../models/pretrained/general/base.pth).
 
 ## :robot: 3. Ensemble predictor training
 Preprocess the labeled dataset:
