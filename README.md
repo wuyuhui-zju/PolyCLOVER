@@ -45,7 +45,7 @@ If you use the downloaded files, you can skip **Library preprocessing**, **Self-
 ## :open_book: 1. Library preprocessing
 We first preprocess the raw combinatorial library data. Run the following scripts to process the datasets:
 ```
-python preprocess_raw_dataset.py  --dataset database --label False
+python preprocess_raw_dataset.py  --dataset database
 python preprocess_database.py
 ```
 - `preprocess_raw_dataset.py`: Handles the initial raw data formatting.
@@ -56,13 +56,12 @@ We provide a shell script to pre-train the model:
 ```
 bash pretrain.sh
 ```
-Inside the script, you can specify options:
-- `--train_mode`: Choose to train from scratch or load from the pre-trained graph encoder
+Inside the script, you can specify `--train_mode` as either `scratch` (train from scratch) or `pretrained` (load the graph encoder trained using general polymer structures); if `pretrained` is selected, you must also specify `--model_path` (--model_path ../models/pretrained/general/base.pth).
 
 ## :robot: 3. Ensemble predictor training
 Preprocess the labeled dataset:
 ```
-python preprocess_raw_dataset.py --dataset initial
+python preprocess_raw_dataset.py --dataset initial --label
 python preprocess_downstream_dataset.py --dataset initial
 python split_dataset.py --dataset initial
 ```
