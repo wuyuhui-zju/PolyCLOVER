@@ -23,7 +23,7 @@ bond_featurizer_all = ConcatFeaturizer([ # 14
     bond_is_in_ring, # 1
     partial(bond_stereo_one_hot,encode_unknown=True) # 7
     ])
-atom_featurizer_all = ConcatFeaturizer([ # 137
+atom_featurizer_all = ConcatFeaturizer([ # 138
     partial(atomic_number_one_hot, allowable_set=list(range(0, 101)), encode_unknown=True), # 102
     partial(atom_degree_one_hot, encode_unknown=True),  # 12
     atom_formal_charge,  # 1
@@ -72,10 +72,6 @@ class Vocab(object):
         except Exception as e:
             print(e)
             return self.vocab_size
-    def one_hot_feature_index(self, atom_type_one_hot1, atom_type_one_hot2, bond_type_one_hot):
-        atom_type1, atom_type2 = np.sort([atom_type_one_hot1.index(1),atom_type_one_hot2.index(1)]).tolist()
-        bond_type = bond_type_one_hot.index(1)
-        return self.index([atom_type1, bond_type, atom_type2])
 
 
 def construct_single_component(smiles, vocab, max_length=5, n_knowledge_nodes=2, start_idx=0, index=0, add_self_loop=True):

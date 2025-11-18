@@ -44,7 +44,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Arguments")
     parser.add_argument("--data_path", type=str, default='../datasets/')
     parser.add_argument("--dataset", type=str, required=True)
-    parser.add_argument("--label", type=str, default=True)
+    parser.add_argument("--label", action="store_true", help="Include label columns")
 
     args = parser.parse_args()
     return args
